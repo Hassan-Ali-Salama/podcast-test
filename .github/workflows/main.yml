@@ -19,7 +19,7 @@ jobs:
          docker build -t podcast-generator:latest .
 
      - name: Run Feed Generator
-       uses: planetoftheweb/podcast-generator@main
+       uses: Hassan-Ali-Salama/podcast-generator@main
        with:
          email: "${{ github.actor }}@localhost"
          name: "${{ github.actor }}"
