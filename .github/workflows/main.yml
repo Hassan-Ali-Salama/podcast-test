@@ -6,20 +6,5 @@ jobs:
     steps:
      - name: Checkout Repo
        uses: actions/checkout@v3
-
-     - name: Checkout podcast-generator Repo
-       uses: actions/checkout@v3
-       with:
-         repository: planetoftheweb/podcast-generator
-         path: podcast-generator
-
-     - name: Build Docker Image
-       run: |
-         cd podcast-generator
-         docker build -t podcast-generator:latest .
-
      - name: Run Feed Generator
        uses: Hassan-Ali-Salama/podcast-generator@main
-       with:
-         email: "${{ github.actor }}@localhost"
-         name: "${{ github.actor }}"
